@@ -6,21 +6,19 @@ components:
         nextPage:
           type: string
           format: uri
-          description: URL to the next page of results, incorporating a skip token for cursor-based pagination.
+          description: URL to the next page of results
         prevPage:
           type: string
           format: uri
-          description: URL to the previous page of results, incorporating a skip token for cursor-based pagination.
+          description: URL to the previous page of results
     Time:
       type: string
       format: date-time
-      description: DateTime in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ).
+      description: DateTime in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
       example: "2024-02-06T15:45:30.123Z"
-    SkipToken:
-      type: object
-      properties:
-        value:
-          type: string
-          description: A token used to skip to a specific point in a collection of data, intended for cursor-based pagination.
-      example:
-        value: "cursorValueHere"
+  securitySchemes:
+    JWTAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT Token used for authorization
