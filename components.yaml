@@ -17,6 +17,6 @@ components:
       description: DateTime in ISO 8601 format (YYYY-MM-DDTHH:mm:ss.sssZ)
       example: "2024-02-06T15:45:30.123Z"
   securitySchemes:
-    JWT Token:
+    JWT:
       type: http
       scheme: bearer
